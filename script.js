@@ -26,7 +26,7 @@ window.onload = () => {
     if (winner) return;
     let xy = location.split("");
     if (board[xy[0]][xy[1]] === undefined) {
-      getCPlayer();
+      cPlayer = cPlayer == 1 ? 0 : 1;
       let sign = players[cPlayer].sign;
       board[xy[0]][xy[1]] = sign;
       document.querySelector(`[data-board='${location}']`).innerHTML = sign;
@@ -34,50 +34,29 @@ window.onload = () => {
     }
   };
 
-  let getCPlayer = () => {
-    cPlayer = cPlayer == 1 ? 0 : 1;
-  };
-
   let checkForWinner = () => {
     for (let i = 0; i < 3; i++) {
-      if (
-        board[i][0] == board[i][1] &&
-        board[i][1] == board[i][2] &&
-        board[i][0] !== undefined
-      ) {
+      if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] !== undefined ) {
         winner = true;
       }
 
-      if (
-        board[0][i] == board[1][i] &&
-        board[1][i] == board[2][i] &&
-        board[0][i] !== undefined
-      ) {
+      if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] !== undefined) {
         winner = true;
       }
     }
 
-    if (
-      board[0][0] == board[1][1] &&
-      board[1][1] == board[2][2] &&
-      board[0][0] !== undefined
-    ) {
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0] !== undefined) {
       winner = true;
     }
 
-    if (
-      board[0][2] == board[1][1] &&
-      board[1][1] == board[2][0] &&
-      board[1][1] !== undefined
-    ) {
+    if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[1][1] !== undefined) {
       winner = true;
     }
+
     count++;
 
     if (winner) {
-      document.querySelector(".info").innerHTML = `${
-        players[cPlayer].name
-      } wins!`;
+      document.querySelector(".info").innerHTML = `${players[cPlayer].name} wins!`;
       return;
     }
 
