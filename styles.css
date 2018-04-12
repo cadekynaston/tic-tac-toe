@@ -4,7 +4,7 @@ body {
 }
 
 .board {
-  width: 460px;
+  max-width: 460px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@ body {
 }
 
 .board div {
-  width: 150px;
+  width: 32.5%;
   height: 150px;
   margin-bottom: 5px;
   background-color: #222;
@@ -32,7 +32,6 @@ body {
 .title {
   margin: 0 auto;
   padding: 20px;
-  width: 460px;
   text-align: center;
   font-size: 60px;
   color: #222;
@@ -40,7 +39,6 @@ body {
 
 .info {
   margin: 0 auto;
-  width: 470px;
   text-align: center;
   font-size: 55px;
   color: #222;
