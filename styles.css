@@ -31,14 +31,17 @@ body {
 
 .title {
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 5px;
   text-align: center;
   font-size: 60px;
   color: #222;
+  line-height: 80px;
 }
 
 .info {
   margin: 0 auto;
+  line-height: 60px;
+  padding-bottom: 15px;
   text-align: center;
   font-size: 55px;
   color: #222;
