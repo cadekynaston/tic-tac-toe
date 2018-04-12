@@ -1,0 +1,47 @@
+body {
+  font-family: "Gaegu", cursive;
+  background-color: D0D0D0;
+}
+
+.board {
+  width: 460px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.board div {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+  background-color: #222;
+  color: white;
+  font-size: 120px;
+  line-height: 130px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.board div:hover {
+  background-color: #505168;
+}
+
+.title {
+  margin: 0 auto;
+  padding: 20px;
+  width: 460px;
+  text-align: center;
+  font-size: 60px;
+  color: #222;
+}
+
+.info {
+  margin: 0 auto;
+  width: 470px;
+  text-align: center;
+  font-size: 55px;
+  color: #222;
+}
