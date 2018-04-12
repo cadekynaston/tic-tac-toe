@@ -78,6 +78,7 @@ window.onload = () => {
       document.querySelector(".info").innerHTML = `${
         players[cPlayer].name
       } wins!`;
+      return;
     }
 
     if (count == 9) {
